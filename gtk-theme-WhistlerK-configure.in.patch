@@ -1,6 +1,6 @@
 --- /dev/null	Tue May  5 22:32:27 1998
 +++ gtk-theme-WhistlerK/configure.in	Thu Jan  3 14:18:26 2002
-@@ -0,0 +1,40 @@
+@@ -0,0 +1,39 @@
 +# Process this file with autoconf to produce a configure script. 
 +AC_INIT(whistler_theme_draw.c)
 +THEME="whistler"
@@ -39,5 +39,4 @@
 +	Makefile
 +	Theme/Makefile
 +	Theme/gtk/Makefile
-+	Theme/gtk/gtkrc
 +])
