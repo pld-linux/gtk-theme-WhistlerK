@@ -1,15 +1,16 @@
 Summary:	WhistlerK - A Whistler-like gtk+ theme engine
 Summary(pl):	Temat dla GTK bazuj±cy na Whistlerze
 Name:		gtk-theme-WhistlerK
-Version:	0.1
+Version:	1.0.0
 Release:	1
 License:	GPL
 Group:		Themes/Gtk
 Group(de):	Themen/Gtk
 Group(pl):	Motywy/Gtk
-Source0:	http://www.themes.org/resources/236/download/file.tgz
+Source0:	http://download.classic.themes.org/gtk/WhistlerK-1.2.x.tar.gz
 Patch0:		%{name}-configure.in.patch
 URL:		http://www.themes.org/resources/236/
+BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
