@@ -9,7 +9,10 @@ Group(de):	Themen/Gtk
 Group(pl):	Motywy/Gtk
 Source0:	http://www.themes.org/resources/236/download/file.tgz
 URL:		http://www.themes.org/resources/236/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -25,7 +28,12 @@ Temat dla GTK bazuj±cy na Whistlerze.
 %setup  -q -n %{name}
 
 %build
-%configure2_13
+rm -f missing
+libtoolize --copy --force
+aclocal
+autoconf
+automake -a -c
+%configure
 %{__make}
 
 %install
@@ -41,5 +49,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/gtk/themes/engines/*
+%attr(755,root,root) %{_libdir}/gtk/themes/engines/*.so
 %{_datadir}/themes/WhistlerK
