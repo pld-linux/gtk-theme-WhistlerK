@@ -8,6 +8,7 @@ Group:		Themes/Gtk
 Group(de):	Themen/Gtk
 Group(pl):	Motywy/Gtk
 Source0:	http://www.themes.org/resources/236/download/file.tgz
+Patch0:		%{name}-configure.in.patch
 URL:		http://www.themes.org/resources/236/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -26,6 +27,7 @@ Temat dla GTK bazuj±cy na Whistlerze.
 
 %prep
 %setup  -q -n %{name}
+%patch0 -p1
 
 %build
 rm -f missing
