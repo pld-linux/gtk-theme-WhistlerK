@@ -1,0 +1,43 @@
+--- /dev/null	Tue May  5 22:32:27 1998
++++ gtk-theme-WhistlerK/configure.in	Thu Jan  3 14:18:26 2002
+@@ -0,0 +1,40 @@
++# Process this file with autoconf to produce a configure script. 
++AC_INIT(whistler_theme_draw.c)
++THEME="whistler"
++
++# Save this value here, since automake will set cflags later
++AM_INIT_AUTOMAKE(gtk-${THEME}-theme, 1.0.0, no-define)
++
++# No static please
++AM_ENABLE_STATIC([no])
++
++dnl Initialize libtool
++AM_PROG_LIBTOOL
++
++dnl Initialize maintainer mode
++AM_MAINTAINER_MODE
++AC_CANONICAL_HOST
++
++# Checks for programs. 
++AC_PROG_CC
++AM_PROG_CC_STDC
++AC_PROG_INSTALL
++AC_PROG_MAKE_SET
++AM_PATH_GTK(1.2.0, ,
++AC_MSG_ERROR([*** GTK 1.2 not installed - please install first ***]))
++
++# Checks for header files. 
++AC_HEADER_STDC
++
++# Checks for typedefs, structures, and compiler characteristics. 
++AC_C_CONST
++
++# Checks for library functions. 
++AC_TYPE_SIGNAL
++AC_OUTPUT([
++	gtk-whistler-theme.spec
++	Makefile
++	Theme/Makefile
++	Theme/gtk/Makefile
++	Theme/gtk/gtkrc
++])
