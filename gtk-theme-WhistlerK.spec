@@ -5,8 +5,6 @@ Version:	1.0.0
 Release:	1
 License:	GPL
 Group:		Themes/Gtk
-Group(de):	Themen/Gtk
-Group(pl):	Motywy/Gtk
 Source0:	http://download.classic.themes.org/gtk/WhistlerK-1.2.x.tar.gz
 Patch0:		%{name}-configure.in.patch
 URL:		http://www.themes.org/resources/236/
