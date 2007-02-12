@@ -1,5 +1,5 @@
 Summary:	WhistlerK - A Whistler-like GTK+ theme engine
-Summary(pl):	Motyw dla GTK+ bazuj±cy na Whistlerze
+Summary(pl.UTF-8):   Motyw dla GTK+ bazujÄ…cy na Whistlerze
 Name:		gtk-theme-WhistlerK
 Version:	1.0.0
 Release:	2
@@ -19,8 +19,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A Whistler-like GTK+ theme engine.
 
-%description -l pl
-Motyw dla GTK+ bazuj±cy na Whistlerze.
+%description -l pl.UTF-8
+Motyw dla GTK+ bazujÄ…cy na Whistlerze.
 
 %prep
 %setup  -q -n %{name}
